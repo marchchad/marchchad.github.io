@@ -11,7 +11,21 @@ I'm fluent in full stack development having designed, developed and maintained m
 
 ### Geographic Information Systems (GIS)
 
-Extensive experience developing web map applications using Google Maps v3, Leaflet 0.7+, Bing Maps v8, ArcGIS Online, ArcGIS for Enterprise, and MapBox.
+Extensive experience developing web map applications including:
+
+- Google Maps v3
+- Leaflet 0.7+
+- Bing Maps v8
+- ArcGIS Online
+- ArcGIS for Enterprise
+
+### Interests
+
+In my spare time I enjoy
+
+- Snowboarding
+- Brewing beer
+- Top roping & bouldering
 
 ### Contact
 
