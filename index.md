@@ -21,7 +21,7 @@ Extensive experience developing web map applications including:
 
 ### Interests
 
-In my spare time I enjoy
+In my spare time I enjoy:
 
 - Snowboarding
 - Brewing beer

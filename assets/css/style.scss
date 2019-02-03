@@ -3,9 +3,60 @@
 
 @import "{{ site.theme }}";
 
+html, body {
+    background-color: #f7f7f7;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper { 
+    height: 100%;
+    overflow: auto;
+    padding: 3em 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    header, footer {
+        float: unset;
+        position: relative;
+
+    }
+
+    header {
+        flex: 1 0 30%;
+    }
+
+    section {
+        flex: 1 0 70%;
+        padding: 3.25em 3em;
+        box-sizing: content-box;
+    }
+
+    footer {
+        flex: 1 0 100%;
+        bottom: unset;
+    }
+}
+
 a {
     &:hover {
         font-weight: normal;
         
+    }
+}
+
+@media print, screen and (max-width: 960px) {
+    
+    .wrapper {
+        padding: 3em 1em;
+    }
+    
+    header, section {
+        flex: 1 0 100%;
     }
 }
