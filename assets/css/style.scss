@@ -54,8 +54,9 @@ a {
     .wrapper {
         padding: 3em 1em;
     
-        header, section {
+        header, section, footer {
             flex: 1 0 100%;
+            padding: 3em 0;
         }
     }
 }
