@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## Chad March
 
-You can use the [editor on GitHub](https://github.com/marchchad/marchchad.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Hello, I'm a Senior GIS Developer for [Resource Data](https://www.resourcedata.com) in Portland, Oregon.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Full Stack Development
 
-### Markdown
+I'm fluent in full stack development having designed, developed and maintained multiple application stacks for over 5 years including:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Microsoft SQL Server + ASP.NET Framework MVC 5 + Bootstrap 3
+- Microsoft SQL Server + .NET Core 2.x MVC + Material Design Components for Web / jQuery
+- Microsoft SQL Server + .NET Core 2.x Web API + React / Redux / Bootstrap 4
+- MySQL 5.5 + Django 1.4 - 1.8 + Foundation 3
 
-```markdown
-Syntax highlighted code block
+### Geographic Information Systems (GIS)
 
-# Header 1
-## Header 2
-### Header 3
+Extensive experience developing web map applications using Google Maps v3, Leaflet 0.7+, Bing Maps v8, ArcGIS Online, ArcGIS for Enterprise, and MapBox.
 
-- Bulleted
-- List
+### Contact
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/marchchad/marchchad.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Interested in working together? Send me an email and let's chat [chadmarchdev@gmail.com](mailto:chadmarchdev@gmail.com)
