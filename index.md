@@ -1,5 +1,3 @@
-## Chad March
-
 Hello, I'm a Senior GIS Developer for [Resource Data](https://www.resourcedata.com) in Portland, Oregon.
 
 ### Full Stack Development
