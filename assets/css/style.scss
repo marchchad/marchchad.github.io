@@ -20,11 +20,10 @@ html, body {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: visible;
 
-    header, footer {
-        float: unset;
+    header, section, footer {
         position: relative;
-
     }
 
     header {
@@ -34,7 +33,7 @@ html, body {
     section {
         flex: 1 0 70%;
         padding: 3.25em 3em;
-        box-sizing: content-box;
+        box-sizing: border-box;
     }
 
     footer {
