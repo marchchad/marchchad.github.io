@@ -1,0 +1,38 @@
+# Entries for the "Experience" timeline, rendered by _includes/experience.html.
+# A company with more than one role gets its own dot for each role, the way
+# LinkedIn lays it out. Dates are "YYYY-MM", a role with no end date is
+# ongoing, and a role with no start date just shows its title.
+
+- org: Resource Data
+  url: https://www.resourcedata.com
+  location: Portland, Oregon
+  summary: >-
+    I started as a GIS programmer, grew into full stack development and then
+    cloud infrastructure and SRE, and I've led project teams since 2019.
+  roles:
+    - title: Board of Directors
+      start: "2026-02"
+    - title: Technical Lead
+      start: "2019-09"
+    - title: Senior GIS Developer
+      start: "2016-09"
+      end: "2019-09"
+    - title: GIS Programmer
+      start: "2013-08"
+      end: "2016-08"
+
+- org: City of Glendale
+  summary: I built a public web map of wildlife sightings.
+  roles:
+    - title: GIS Developer
+      start: "2012-06"
+      end: "2013-08"
+
+- org: Los Angeles County Department of Public Works
+  summary: >-
+    I built a geometric network of the county's storm drain system for flow
+    analysis.
+  roles:
+    - title: GIS Specialist
+      start: "2010-08"
+      end: "2012-04"

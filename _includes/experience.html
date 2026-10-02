@@ -1,0 +1,49 @@
+<ol class="timeline">
+{%- for job in site.data.experience %}
+  {%- if job.url -%}
+    {%- capture org %}<a href="{{ job.url }}">{{ job.org }}</a>{% endcapture -%}
+  {%- else -%}
+    {%- assign org = job.org -%}
+  {%- endif -%}
+
+  {%- if job.roles.size > 1 %}
+    {%- comment -%} The company line spans from the earliest role to the latest one. {%- endcomment -%}
+    {%- assign earliest = '' -%}
+    {%- assign latest = '' -%}
+    {%- assign ongoing = false -%}
+    {%- for role in job.roles -%}
+      {%- if role.start -%}
+        {%- if earliest == '' or role.start < earliest -%}{%- assign earliest = role.start -%}{%- endif -%}
+        {%- if role.end -%}
+          {%- if role.end > latest -%}{%- assign latest = role.end -%}{%- endif -%}
+        {%- else -%}
+          {%- assign ongoing = true -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if ongoing -%}{%- assign latest = '' -%}{%- endif %}
+  <li>
+    <h3>{{ org }}</h3>
+    <p class="meta">{% if job.location %}{{ job.location }} · {% endif %}{% include date-range.html start=earliest end=latest %}</p>
+    {{ job.summary | markdownify }}
+    <ol class="positions">
+      {%- for role in job.roles %}
+      <li{% unless role.end %} class="current"{% endunless %}>
+        <h4>{{ role.title }}</h4>
+        {%- if role.start %}
+        <p class="meta">{% include date-range.html start=role.start end=role.end %}</p>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+  </li>
+  {%- else %}
+    {%- assign role = job.roles.first %}
+  <li{% unless role.end %} class="current"{% endunless %}>
+    <h3>{{ role.title }}</h3>
+    <p class="meta">{{ org }}{% if job.location %}, {{ job.location }}{% endif %} · {% include date-range.html start=role.start end=role.end %}</p>
+    {{ job.summary | markdownify }}
+  </li>
+  {%- endif %}
+{%- endfor %}
+</ol>

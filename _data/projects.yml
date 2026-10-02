@@ -1,0 +1,126 @@
+# Project cards for the "Selected work" section, rendered in index.md.
+# featured projects get full cards, the rest go in the smaller "More projects"
+# grid below them. summary is run through markdownify, so links and
+# emphasis work there. Check client names against the Confidential Text Filter
+# on the intranet before adding new ones.
+
+- name: Washington DNR Burn Portal
+  featured: true
+  url: https://burnportal.dnr.wa.gov
+  client: Washington State Department of Natural Resources
+  role: Technical Lead
+  years: 2018 to present
+  summary: >-
+    I've been on the Burn Portal since 2018, when we rebuilt DNR's burn permit
+    tracking system as an offline-capable progressive web app, and I lead the
+    team that builds and runs it today. It's a React front end over an ASP.NET
+    Core API on Amazon EKS, with the infrastructure managed in Terragrunt,
+    deployments going out through ArgoCD and sign in brokered through Keycloak
+    to multiple Identity Providers.
+  stack: [React, Redux Toolkit, ASP.NET Core, SQL Server, PostgreSQL, Amazon EKS, Terragrunt, ArgoCD, Keycloak, Grafana]
+
+- name: FAA WeatherCams
+  featured: true
+  url: https://weathercams.faa.gov
+  client: Federal Aviation Administration
+  role: Technical Lead and Site Reliability Engineer
+  years: 2020 to 2025
+  summary: >-
+    WeatherCams puts aviation weather camera imagery and flight planning tools
+    in front of pilots and forecasters. I co-led the program as its
+    infrastructure lead and SRE, ran the migration of the React and Node.js
+    application and its databases off Google Cloud Platform and onto AWS, and
+    built the Terraform modules, container builds and vulnerability scanning
+    pipelines it runs on.
+  stack: [React, Node.js, PostgreSQL, AWS, Terraform, Docker]
+
+- name: Orgo
+  featured: true
+  url: https://www.orgo.io/
+  client: Orgo, LLC
+  role: Technical Lead
+  years: 2023 to present
+  summary: >-
+    Orgo, "DOD's Smartest Directory," is a startup building a dynamic org chart
+    application for a U.S. Air Force test group. I lead the application
+    architecture and technical direction, with most of the design effort going
+    into client-side rendering so the app stays quick with a lot of data on
+    screen, and I scaled the team up by bringing in and leading more engineers
+    from Resource Data. It's a TypeScript stack with a React client over
+    Express and PostgreSQL on AWS.
+  stack: [TypeScript, React, Node.js, Express, PostgreSQL, AWS, Keycloak]
+
+- name: CMMC-ready AWS reference environment
+  featured: true
+  client: Resource Data, internal
+  role: Architect and developer
+  years: 2026
+  summary: >-
+    A monorepo of reusable Terraform modules for standing up a CMMC compliant
+    AWS environment, with secure CI/CD, automated testing, guidance for using
+    AI tooling safely and a working example of producing the artifacts an
+    assessor needs to see. New compliance-focused engagements start from it so
+    the foundation's already proven before we write the first feature.
+  stack: [AWS, Terraform, GitHub Actions, Checkov, CMMC]
+
+- name: ORCA
+  client: Pacific States Marine Fisheries Commission
+  role: Technical Lead
+  years: 2020 to 2022
+  summary: >-
+    ORCA is a tablet application that lets people onboard West Coast fishing
+    vessels record fisheries data straight into a database, replacing paper
+    forms that used to get keyed into an Access application by hand back on
+    shore. I led its design and development across several versions, and it's
+    still in use today.
+  stack: [WPF, .NET, SQL Server]
+
+- name: TASC
+  client: NorthWest Senior & Disability Services
+  years: 2017 to present
+  summary: >-
+    TASC is the intranet application NWSDS staff use for scheduling and case
+    management, along with case load and consumer information reporting. I
+    built it and I'm still supporting it.
+  stack: [ASP.NET Core, SQL Server, SSRS]
+
+- name: Oregon Universal Service Fund portal
+  client: Oregon Public Utility Commission
+  years: 2017 to present
+  summary: >-
+    I built a new portal, replacing a deprecated Silverlight application, where
+    Oregon businesses pay into and receive disbursements from the state's
+    universal service fund. PUC staff get admin views for managing the
+    companies and the fund, and I'm still supporting it today.
+  stack: [ASP.NET MVC, SQL Server, Bootstrap]
+
+- name: GeoBase Web Mapping Viewer
+  client: Pacific Air Forces, U.S. Air Force
+  role: UI and UX lead
+  years: 2015 to 2017
+  summary: >-
+    Every Pacific Air Forces base uses the GeoBase Web Mapping Viewer, and its
+    framework and codebase had fallen out of date, so we built a new one. I led
+    the UI and UX design and built toolsets on it for fuel tracking, capital
+    improvement projects and backflow prevention, among others.
+
+- name: Fish Trax
+  client: Fish Trax Systems and the Oregon Salmon Commission
+  years: 2015 to 2022
+  summary: >-
+    Fish Trax tracks commercially caught fish from sea to table for dealers,
+    retailers and consumers. I moved the application off DotCloud, a deprecated
+    PaaS, and onto AWS, and later led the UI design for the Oregon Salmon
+    Commission's rebuilt FishTrax Portal, including its web map, and set up
+    continuous integration for it.
+  stack: [AWS, ASP.NET MVC, SQL Server, Google Maps API]
+
+- name: Well data web map
+  client: A major oil field service company
+  years: 2014 to 2015
+  summary: >-
+    A custom web map for querying and visualizing well and resource data
+    spatially and in tables. I led the design and build of the main map
+    interface and worked directly with the client's staff on custom search
+    tools that fit their workflows.
+  stack: [Leaflet, Mapbox, Bing Maps, JavaScript, Bootstrap]

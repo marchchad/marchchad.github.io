@@ -1,0 +1,31 @@
+{%- comment -%}
+  Renders "Sep 2016 to Sep 2019 · 3 yrs 1 mo" from start and end dates in
+  YYYY-MM form. An empty end means ongoing, counted through the build date.
+  Months are counted inclusively so the durations match LinkedIn.
+{%- endcomment -%}
+{%- assign start_parts = include.start | split: '-' -%}
+{%- assign start_total = start_parts[0] | plus: 0 | times: 12 | plus: start_parts[1] -%}
+{%- if include.end and include.end != '' -%}
+  {%- assign end_parts = include.end | split: '-' -%}
+  {%- assign end_total = end_parts[0] | plus: 0 | times: 12 | plus: end_parts[1] -%}
+  {%- assign end_label = include.end | append: '-01' | date: '%b %Y' -%}
+{%- else -%}
+  {%- assign now_month = 'now' | date: '%m' | plus: 0 -%}
+  {%- assign end_total = 'now' | date: '%Y' | plus: 0 | times: 12 | plus: now_month -%}
+  {%- assign end_label = 'present' -%}
+{%- endif -%}
+{%- assign months = end_total | minus: start_total | plus: 1 -%}
+{%- assign yrs = months | divided_by: 12 -%}
+{%- assign mos = months | modulo: 12 -%}
+{%- comment -%} Built with append since Liquid drops a block whose only content is a space. {%- endcomment -%}
+{%- assign duration = '' -%}
+{%- if yrs > 0 -%}
+  {%- assign duration = yrs | append: ' yr' -%}
+  {%- if yrs > 1 -%}{%- assign duration = duration | append: 's' -%}{%- endif -%}
+{%- endif -%}
+{%- if mos > 0 -%}
+  {%- if duration != '' -%}{%- assign duration = duration | append: ' ' -%}{%- endif -%}
+  {%- assign duration = duration | append: mos | append: ' mo' -%}
+  {%- if mos > 1 -%}{%- assign duration = duration | append: 's' -%}{%- endif -%}
+{%- endif -%}
+<span class="nowrap">{{ include.start | append: '-01' | date: '%b %Y' }} to {{ end_label }}</span> · <span class="nowrap">{{ duration }}</span>

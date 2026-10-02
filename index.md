@@ -1,79 +1,110 @@
-Hello, I'm a Technical Lead at [Resource Data](https://www.resourcedata.com) in Portland, Oregon. I got my start in GIS in 2010 and have spent the last 13 years at Resource Data growing from GIS programming into full stack development, and more recently into site reliability engineering and cloud infrastructure.
+---
+layout: default
+---
 
-### What I do
+{% assign years_at_rdi = 'now' | date: '%Y' | minus: 2013 %}
 
-I work as a consultant, so most of what I build is for clients, from early architecture decisions through to running the thing in production. Day to day I build and maintain web applications end to end, own the cloud infrastructure and CI/CD pipelines they run on, and lead small teams delivering those projects. Lately a lot of that work has been modernizing older applications, moving them to the cloud, and hardening the automation and infrastructure around them.
+## About {#about}
 
-### Experience
+Hi, I'm Chad. I lead small teams at Resource Data building web applications for our clients, mostly public agencies, and I own the cloud infrastructure and pipelines those apps run on from the first architecture decisions through years of running them in production.
+{: .lede}
 
-#### Technical Lead, Resource Data (2013 to present)
+[Resource Data](https://www.resourcedata.com) is a technology consulting firm with offices in Alaska, Idaho, Oregon and Texas, and I've been here {{ years_at_rdi }} years, working out of Portland. I got my start in GIS in 2010 and maps still show up in a lot of what I build. Most of my work now is full stack development and site reliability engineering on AWS, and lately that's meant modernizing older applications, moving them to the cloud and getting them ready for compliance frameworks like SOC 2 and CMMC.
 
-I started as a GIS Programmer in 2013, moved into a Senior GIS Developer role in 2016, and have been a Technical Lead since 2019. A few of the projects I've led:
+I also sit on Resource Data's board of directors, where part of my focus is how the company adopts AI and emerging technology.
 
-- Provide technical leadership and help build a dynamic org chart application (Orgo, "DOD's Smartest Directory") for a U.S. Air Force test group in the DoD space, using React on AWS
-- Led the modernization of Washington State DNR's Burn Permit tracking system, architecting and deploying an offline-capable Progressive Web App in React and Redux with RESTful JSON, running on AWS over a .NET Core backend and still support it to this day
-- Co-led the FAA Weather Cameras program as Technical Lead and Site Reliability Engineer. The program delivers aviation weather camera imagery and flight-planning tools to pilots and forecasters. I ran the migration of the application and its databases off Google Cloud Platform and onto AWS, on PostgreSQL and Terraform
+## How I work {#how-i-work}
 
-#### Earlier GIS roles (2010 to 2013)
+Most of the projects I lead run for years, so I build them expecting to be the one supporting them down the road. Infrastructure goes into Terraform from day one, every change runs through a pipeline that lints, tests and scans it before it ships, and monitoring is set up so we hear about a problem before a user has to tell us. Catching a bug in the pipeline is a lot cheaper for y'all than catching it in production once it's turned into support calls and frustrated users.
 
-Before Resource Data I built a public wildlife-sighting web map as a GIS Developer for the City of Glendale, and built a geometric network of LA County's storm drain system for flow analysis as a GIS Specialist at the LA County Department of Public Works.
+Whatever the main goal of a project is, a new set of features, a cloud migration or a SOC 2 Type I/II audit, I plan the work so it also leaves the application more scalable, stable and resilient, easier to maintain and operate, and nicer for the next developer to work in.
 
+I do a lot of the work before a project starts too, scoping it, estimating it and laying out the architecture with the client, so the person making those early calls is the same one who'll be living with them in production. When something does go wrong I'll tell you right away, along with what caused it and what we've already done about it.
+
+## Selected work {#work}
+
+<div class="projects">
+{%- for project in site.data.projects %}{% if project.featured %}
+{% include project-card.html project=project heading="h3" %}
+{%- endif %}{% endfor %}
+</div>
+
+### More projects
+
+<div class="projects projects-compact">
+{%- for project in site.data.projects %}{% unless project.featured %}
+{% include project-card.html project=project heading="h4" %}
+{%- endunless %}{% endfor %}
+</div>
+
+## Skills {#skills}
+
+<div class="skill-grid" markdown="1">
+<section markdown="1">
 ### Full stack development
 
-I've designed, developed and maintained web application stacks for over 13 years. These days I mostly work in:
+- React, Redux and TypeScript
+- ASP.NET Core and .NET Framework, Node.js and Express
+- PostgreSQL and SQL Server
+- Earlier production work in ASP.NET MVC, Django and WPF desktop and tablet apps
+</section>
 
-- PostgreSQL / SQL Server on the data side
-- Node.js and .NET (Core and Framework) on the back end
-- React, Redux and TypeScript on the front end, with a lot of C# and SQL underneath
-
-Over the years I've also shipped production work on ASP.NET MVC with Bootstrap, .NET Core MVC, Django with Foundation, and WPF desktop and tablet apps on .NET with SQL Server.
-
+<section markdown="1">
 ### Cloud infrastructure and SRE
 
-I design and manage cloud infrastructure on AWS and GCP with Terraform, and build the automation that keeps it running:
+- AWS, mostly EKS, EC2, RDS, S3, VPC, IAM and CloudFront, plus GCP
+- Terraform and Terragrunt
+- GitHub Actions and ArgoCD
+- Docker, Kubernetes and Helm
+- Trivy, Anchore and Grype for container scanning
+- Prometheus and Grafana for monitoring and alerting
+</section>
 
-- Infrastructure as Code with Terraform
-- CI/CD with GitHub Actions and ArgoCD
-- Containers and orchestration with Docker and Kubernetes
-- Automated container security scanning with Trivy, Anchore and Grype
+<section markdown="1">
+### Delivery and leadership
 
-On AWS I work across EC2, S3, VPC, RDS, EKS, IAM and CloudFront.
+- Leading small delivery teams
+- Scoping, estimates and proposals
+- Architecture and technical design
+- Code review and mentoring
+- Interviewing engineering candidates
+</section>
 
-### AI-assisted development
+<section markdown="1">
+### GIS
 
-I use AI coding tools daily to accelerate both spec-driven and agentic development, with hands-on experience across GitHub Copilot, Claude Code and Gemini. What that looks like in practice:
-
-- General, cross-tool skills for driving these agents well, plus project-specific setups tuned to a given codebase or client
-- Advising teammates and clients on evaluating and selecting the right agentic harness and provider for the work in front of them
-- Coaching teams on how to use these tools effectively once they've settled on one
-
-### Geographic Information Systems (GIS)
-
-GIS is where I started and it still runs through most of what I build. I hold a master's in GIS and have years of experience building web and enterprise mapping applications. I work across:
-
-- Esri ArcGIS Enterprise and ArcGIS Online
+- ArcGIS Enterprise and ArcGIS Online
 - ArcGIS Maps SDK for JavaScript and the ArcGIS REST API
 - ArcGIS Server, ArcSDE and ArcPy
-- Leaflet for lighter web mapping
+- Leaflet
+</section>
+
+<section class="wide" markdown="1">
+### AI-assisted development
+
+I use AI coding agents every day for spec-driven and agentic development, across GitHub Copilot, Claude Code and Gemini. A lot of our clients decide which AI tools their contractors can use, so I keep our teams proficient in whichever one a client has picked, set up project-specific instructions and skills tuned to each codebase, and coach teams on getting good results out of them.
+</section>
+</div>
+
+## Experience {#experience}
+
+{% include experience.html %}
 
 ### Education
 
 - M.A., Geographic Information Systems, California State University, Northridge (2013)
 - B.A., Geography, California State University, Northridge (2010)
 
-### What people say
+## Joining Resource Data {#joining-rdi}
 
-A former CSUN classmate and coworker described me as having "a very deep understanding of the GIS discipline." You can find that and other recommendations on my [LinkedIn](https://www.linkedin.com/in/chadmarch/).
+Resource Data has offices in Anchorage, Juneau, Boise, Houston and Portland, and a lot of roles can be remote since most of our clients are open to remote team members. Our career paths cover software development, systems engineering, data engineering, GIS, business analysis and project management, and open positions are posted on our [careers page](https://www.resourcedata.com/careers/).
 
-### Interests
+The teams I lead are small, so everybody owns features from the database through to production, and every pull request gets a review from a teammate before it merges. There's plenty of room to grow into infrastructure and SRE work if that interests you, which is the same path I took coming up from GIS.
 
-Away from the keyboard I'm usually:
+## Away from work {#away}
 
-- Snowboarding
-- Brewing beer
-- Top roping and bouldering
-- Playing with my kids
+Away from the keyboard I'm usually snowboarding, brewing beer, top roping or bouldering, or playing with my kids. That's Pivo with me in the photo.
 
-### Contact
+## Contact {#contact}
 
-Got a project in mind, or just want to talk shop? Send me an email at [chadmarchdev@gmail.com](mailto:chadmarchdev@gmail.com) or find me on [LinkedIn](https://www.linkedin.com/in/chadmarch/).
+Whether it's a project, a role at Resource Data or anything else, email me at [chadmarchdev@gmail.com](mailto:chadmarchdev@gmail.com) or find me on [LinkedIn](https://www.linkedin.com/in/chadmarch/), which is also where you'll find recommendations from people I've worked with.

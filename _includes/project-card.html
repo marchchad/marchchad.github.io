@@ -1,0 +1,10 @@
+{%- assign p = include.project -%}
+{%- assign h = include.heading | default: 'h3' -%}
+<article class="project">
+<{{ h }}>{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</{{ h }}>
+<p class="meta">{{ p.client }}{% if p.role %} · {{ p.role }}{% endif %}{% if p.years %} · <span class="nowrap">{{ p.years }}</span>{% endif %}</p>
+{{ p.summary | markdownify }}
+{%- if p.stack %}
+<ul class="tags">{% for item in p.stack %}<li>{{ item }}</li>{% endfor %}</ul>
+{%- endif %}
+</article>

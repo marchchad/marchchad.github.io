@@ -1,5 +1,42 @@
-theme: jekyll-theme-minimal
 title: Chad March
-description: A brief intro to me, my professional skills, and my interests.
-logo: /assets/images/ChadAndPivo-min.jpg
-google_analytics: UA-133731749-1
+tagline: Technical Lead at Resource Data
+description: Technical Lead at Resource Data in Portland, Oregon. I lead teams that build web applications and the cloud infrastructure they run on, and I stick around to keep them running.
+url: https://marchchad.github.io
+lang: en-US
+logo: /assets/images/chad-and-pivo-640.jpg
+
+author:
+  name: Chad March
+  role: Technical Lead
+  company: Resource Data
+  company_url: https://www.resourcedata.com
+  location: Portland, Oregon
+  email: chadmarchdev@gmail.com
+  linkedin: chadmarch
+  github: marchchad
+
+nav:
+  - title: About
+    anchor: about
+  - title: How I work
+    anchor: how-i-work
+  - title: Selected work
+    anchor: work
+  - title: Skills
+    anchor: skills
+  - title: Experience
+    anchor: experience
+  - title: Joining Resource Data
+    anchor: joining-rdi
+  - title: Contact
+    anchor: contact
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - "screencapture-*"
